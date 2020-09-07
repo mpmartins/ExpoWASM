@@ -1,7 +1,7 @@
 // NOLINT(namespace-envoy)
 #include <string>
 
-#include "sdk/proxy_wasm_intrinsics.h"
+#include "lib/proxy_wasm_sdk/proxy_wasm_intrinsics.h"
 
 class ExpoWorkerRootContext : public RootContext {
    public:

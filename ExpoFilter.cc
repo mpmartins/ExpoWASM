@@ -4,7 +4,7 @@
 #include <unordered_set>
 #include <vector>
 
-#include "sdk/proxy_wasm_intrinsics.h"
+#include "lib/proxy_wasm_sdk/proxy_wasm_intrinsics.h"
 #include "lib/config_parser.h"
 
 class ExpoFilterRootContext : public RootContext {
