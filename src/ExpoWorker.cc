@@ -1,5 +1,8 @@
 // NOLINT(namespace-envoy)
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 #include "../lib/proxy_wasm_sdk/proxy_wasm_intrinsics.h"
 
