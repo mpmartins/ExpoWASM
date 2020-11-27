@@ -13,6 +13,7 @@ class ExpoFilterRootContext : public RootContext {
 
   bool onConfigure(size_t config_size) override;
   bool onStart(size_t) override;
+  void onTick() override;
   Config getConfig() { return config_; }
 
  private:
@@ -22,6 +23,11 @@ class ExpoFilterRootContext : public RootContext {
 bool ExpoFilterRootContext::onStart(size_t) {
   LOG_INFO("onStart");
   return true;
+}
+
+void ExpoFilterRootContext::onTick() {
+    LOG_INFO("onTick");
+    return;
 }
 
 bool ExpoFilterRootContext::onConfigure(size_t config_size) {
@@ -40,6 +46,11 @@ bool ExpoFilterRootContext::onConfigure(size_t config_size) {
     LOG_ERROR("onConfigure: " + log);
     return false;
   }
+  
+  int poll_interval_milliseconds;
+  poll_interval_milliseconds = 1000;
+  proxy_set_tick_period_milliseconds(poll_interval_milliseconds);
+
   LOG_INFO("onConfigure: " + log);
   return true;
 }
